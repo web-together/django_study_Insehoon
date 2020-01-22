@@ -38,8 +38,9 @@ class Product(models.Model):
 
     class Meta:
         ordering = ['-created']
-        index_together = [['id','slug']]
-
+        index_together = [['id','slug']] 
+        #두개의 컬럼을 묶어서 하나의 고유한 객체를 인지
+    
     def __str__(self):
         return self.name
 
